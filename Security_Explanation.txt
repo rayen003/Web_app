@@ -1,0 +1,17 @@
+SECURITY CONSIDERATIONS IN DOCKER DEPLOYMENT
+
+1. IMPORTANCE OF .GITIGNORE FOR .ENV FILES
+- .env files contain sensitive information (passwords, API keys, credentials)
+- If not ignored, credentials could be exposed in version control
+
+
+2. RISKS OF EXPOSING CREDENTIALS
+- Unauthorized database access
+- Service compromise
+- Data breaches
+- Financial implications if API keys are exposed
+- Potential for malicious use of cloud services
+
+3. SECURITY BEST PRACTICES
+- Use environment variables for sensitive data
+- Never commit .env files to git
