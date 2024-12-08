@@ -41,6 +41,4 @@ docker-compose down
 ## Troubleshooting
 For common issues, refer to the [TROUBLESHOOTING.md](TROUBLESHOOTING.md) file.
 
-## Notes
-- This is a course assignment
-- Developed for [Course Name, Semester Year]
+
