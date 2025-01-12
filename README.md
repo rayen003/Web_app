@@ -1,31 +1,57 @@
-# Course Assignment: A3 Web Application
+# Modern Web Application with Docker
+
+A containerized web application built with Flask and PostgreSQL, demonstrating modern DevOps practices and clean architecture.
+
+## Technology Stack
+- **Backend**: Python Flask
+- **Database**: PostgreSQL 13
+- **Containerization**: Docker & Docker Compose
+- **Architecture**: Microservices-based approach
+
+## Features
+- Containerized application deployment
+- PostgreSQL database integration
+- Environment-based configuration
+- Production-ready Docker setup
 
 ## Project Structure
 ```
-A3/
+.
 ├── web/           # Web application source code
-├── db/            # Database-related files
+├── db/            # Database configuration and migrations
 ├── docker-compose.yml
-├── .env           # Environment configuration
-└── TROUBLESHOOTING.md
+└── .env           # Environment configuration
 ```
 
-## Prerequisites
+## Getting Started
+
+### Prerequisites
 - Docker
 - Docker Compose
 
-## Setup and Running the Application
-
-### Environment Configuration
-1. Copy `.env.example` to `.env`
-2. Modify the `.env` file with your specific configuration
-
-### Building and Running with Docker
+### Quick Start
+1. Clone the repository:
 ```bash
-# Build and start the containers
-docker-compose up --build
+git clone https://github.com/rayen003/Web_app.git
+cd Web_app
+```
 
-# To run in detached mode
+2. Set up environment variables:
+```bash
+cp .env.example .env
+# Edit .env with your configurations
+```
+
+3. Build and run the application:
+```bash
+docker-compose up --build
+```
+
+The application will be available at `http://localhost:5000`
+
+### Development Mode
+For development with debug mode:
+```bash
 docker-compose up -d --build
 ```
 
@@ -34,11 +60,10 @@ docker-compose up -d --build
 docker-compose down
 ```
 
-## Services
-- **Web Service**: Runs on port 5000
-- **Database**: PostgreSQL 13, configured with custom user and database
+## Architecture
+- **Web Service**: Flask application running on port 5000
+- **Database**: PostgreSQL 13 with custom configuration
+- **Docker**: Multi-container orchestration
 
-## Troubleshooting
-For common issues, refer to the [TROUBLESHOOTING.md](TROUBLESHOOTING.md) file.
-
-
+## Contributing
+Feel free to submit issues and enhancement requests!
